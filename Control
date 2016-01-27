@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Patron1
+{
+    public abstract class Control
+    {
+        public string valor { get; protected set; }
+        public Formulario Director { get; set; }
+        public string nombre { get; protected set; }
+        public Control(string nombre)
+        {
+            this.valor = "";
+            this.nombre = nombre;
+        }
+        public abstract void informa();
+        protected void modifica()
+        {
+            Director.controlModificado(this);
+        }
+    }
+}
