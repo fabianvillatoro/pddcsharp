@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Patron1
+{
+    public class ZonaInformacion:Control
+    {
+        public ZonaInformacion(string nombre) : base(nombre) { }
+        public override void informa()
+        {
+            Console.WriteLine("Información de: " + nombre);
+            valor = Console.ReadLine();
+            this.modifica();
+        }
+    }
+}
